@@ -16,7 +16,7 @@ class SignInBloc extends AutoDisposeNotifier<SignInState> {
 
   @override
   SignInState build() {
-    _signInRepository = ref.read(signInRespositoryProvider);
+    _signInRepository = ref.read(signInRespository);
     _sessionBloc = ref.read(sessionProvider.notifier);
     return const SignInState(email: '', password: '', fetching: false);
   }

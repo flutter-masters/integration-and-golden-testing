@@ -9,3 +9,16 @@ class AppUser {
     required this.name,
   });
 }
+
+extension AppUserX on AppUser {
+  AppUser copyWith({
+    String? email,
+    String? name,
+  }) {
+    return AppUser(
+      id: id,
+      name: name ?? this.name,
+      email: email ?? this.email,
+    );
+  }
+}

@@ -10,7 +10,7 @@ final appInitializationProvider = FutureProvider(
       return NoInternet();
     }
 
-    final appUser = await ref.read(authenticationRepositoryProvider).authenticatedUser;
+    final appUser = await ref.read(authenticationRepository).authenticatedUser;
     return Initializated(appUser: appUser);
   },
 );

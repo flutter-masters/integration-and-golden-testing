@@ -13,7 +13,7 @@ class SessionBloc extends Notifier<AppUser?> {
   late final AuthenticationRepository _authenticationRepository;
   @override
   AppUser? build() {
-    _authenticationRepository = ref.read(authenticationRepositoryProvider);
+    _authenticationRepository = ref.read(authenticationRepository);
 
     return switch (ref.read(appInitializationProvider).value) {
       Initializated data => data.appUser,

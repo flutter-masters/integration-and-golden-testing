@@ -26,6 +26,8 @@ class SignInScreen extends StatelessWidget {
                     hintText: 'Email',
                   ),
                   validator: FormValidator.email,
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
                   onChanged: ProviderScope.containerOf(context)
                       .read(signInProvider.notifier)
                       .onEmailChanged,
@@ -74,6 +76,7 @@ class SignInScreen extends StatelessWidget {
   }
 
   Future<void> _submit(BuildContext context) async {
+    FocusManager.instance.primaryFocus?.unfocus();
     if (!Form.of(context).validate()) {
       return;
     }
