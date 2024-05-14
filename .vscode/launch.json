@@ -1,7 +1,17 @@
 {
   "configurations": [
     {
-      "name": "Debug",
+      "name": "Debug Staging",
+      "type": "dart",
+      "request": "launch",
+      "flutterMode": "debug",
+      "args": [
+        "--dart-define-from-file=env.stg.json"
+      ],
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "Debug Prod",
       "type": "dart",
       "request": "launch",
       "flutterMode": "debug",

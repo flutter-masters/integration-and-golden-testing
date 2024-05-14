@@ -21,6 +21,11 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                Text(
+                  const String.fromEnvironment('env'),
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const SizedBox(height: 20),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: 'Email',

@@ -40,6 +40,7 @@ class MyApp extends ConsumerWidget {
               ),
           },
           loading: () => Material(
+            key: const Key('main-loader'),
             color: ThemeData.dark().scaffoldBackgroundColor,
             child: const Center(
               child: CircularProgressIndicator(),
