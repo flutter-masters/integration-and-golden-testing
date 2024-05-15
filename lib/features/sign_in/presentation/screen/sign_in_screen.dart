@@ -27,6 +27,7 @@ class SignInScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
+                  key: const Key('email-input'),
                   decoration: const InputDecoration(
                     hintText: 'Email',
                   ),
@@ -39,6 +40,7 @@ class SignInScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 15),
                 TextFormField(
+                  key: const Key('password-input'),
                   decoration: const InputDecoration(
                     hintText: 'Password',
                   ),
@@ -62,9 +64,10 @@ class SignInScreen extends StatelessWidget {
                     }
 
                     return ElevatedButton(
+                      key: const Key('submit-button'),
                       style: ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(
-                          Colors.blueAccent.withOpacity(allow ? 1 : 0.4),
+                          Colors.red.withOpacity(allow ? 1 : 0.4),
                         ),
                       ),
                       onPressed: allow ? () => _submit(context) : null,
